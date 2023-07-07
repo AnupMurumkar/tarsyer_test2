@@ -11,7 +11,7 @@ def center_handle(x,y,w,h):
     cy=y+y1
     return cx,cy
     
-file = r"Dynamic_Traffic_Managment_Project\lane1.mp4"
+file = r"cars_on_highway(360p).mp4"
 
 def detectCars(file):
     cap=cv2.VideoCapture(file)

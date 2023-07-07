@@ -3,8 +3,8 @@ import cv2
 import numpy as np
 import requests
 
-cascade_src = 'cars.xml'
-video_src = 'Cars.mp4'
+cascade_src = 'haarcascade_car.xml'
+video_src = 'cars_on_highway(360p).mp4'
 
 cap = cv2.VideoCapture(video_src)
 car_cascade = cv2.CascadeClassifier(cascade_src)

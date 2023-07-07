@@ -3,13 +3,14 @@ import time
 import numpy as np
 
 # Create our body classifier
-car_classifier = cv2.CascadeClassifier('Haarcascades\haarcascade_car.xml')
+car_classifier = cv2.CascadeClassifier(r'D:\projects\Python-Computer Vision\computer vision tutorial\krish naik course\cars detection\haarcascade_car.xml')
 
 # Initiate video capture for video file
-cap = cv2.VideoCapture('cars_on_highway(360p).mpv4')
+cap = cv2.VideoCapture(r'D:\projects\Python-Computer Vision\computer vision tutorial\krish naik course\cars detection\cars_on_highway (360p).mp4')
 
 
 # Loop once video is successfully loaded
+count =0
 while cap.isOpened():
     
     time.sleep(.05)
@@ -19,14 +20,15 @@ while cap.isOpened():
    
     # Pass frame to our car classifier
     cars = car_classifier.detectMultiScale(gray, 1.4, 2)
-    count =0
+    
     # Extract bounding boxes for any bodies identified
     for (x,y,w,h) in cars:
         cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 255), 2)
         count +=1
         cv2.imshow('Cars', frame)
-        print(cnt, " cars found")
+        print(count,'cars found')
     if cv2.waitKey(1) == 13: #13 is the Enter Key
         break
+
 cap.release()
 cv2.destroyAllWindows()

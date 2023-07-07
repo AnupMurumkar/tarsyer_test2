@@ -3,10 +3,10 @@ import time
 import numpy as np
 
 # Create our body classifier
-car_classifier = cv2.CascadeClassifier(r'D:\projects\Python-Computer Vision\computer vision tutorial\krish naik course\cars detection\haarcascade_car.xml')
+car_classifier = cv2.CascadeClassifier(r'haarcascade_car.xml')  #path of haarcascade file
 
 # Initiate video capture for video file
-cap = cv2.VideoCapture(r'D:\projects\Python-Computer Vision\computer vision tutorial\krish naik course\cars detection\cars_on_highway (360p).mp4')
+cap = cv2.VideoCapture(r'cars_on_highway (360p).mp4')  #path of video file
 
 
 # Loop once video is successfully loaded

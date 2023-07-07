@@ -25,9 +25,8 @@ while cap.isOpened():
         cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 255), 2)
         count +=1
         cv2.imshow('Cars', frame)
-
+        print(cnt, " cars found")
     if cv2.waitKey(1) == 13: #13 is the Enter Key
         break
-print("total cars"+ count)
 cap.release()
 cv2.destroyAllWindows()

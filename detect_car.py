@@ -1,6 +1,4 @@
 import cv2
-import time
-import numpy as np
 
 car_classifier = cv2.CascadeClassifier(r'haarcascade_car.xml')  #path of haarcascade file
 

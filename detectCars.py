@@ -3,7 +3,7 @@ import numpy as np
 from centroidtracker import CentroidTracker
 
 # Load YOLOv3 weights and configuration
-net = cv2.dnn.readNetFromDarknet(r'D:\projects\Python-Computer Vision\computer vision tutorial\krish naik course\yolo car detection\YAD2K-master\YAD2K-master\yolov2.cfg', r'D:\projects\Python-Computer Vision\computer vision tutorial\krish naik course\yolo car detection\YAD2K-master\YAD2K-master\yolov2.weights')
+net = cv2.dnn.readNetFromDarknet(r'yolov2.cfg', r'yolov2.weights') #load the path of yolo config and yolo weight files
  
 
 # Load COCO class labels
